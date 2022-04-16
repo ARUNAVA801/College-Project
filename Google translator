@@ -1,0 +1,13 @@
+first install the google language translator library
+use the modules
+translate
+
+1 pip install googletrans==3.1.0
+2 
+from googletrans import Translator
+
+translater = Translator()
+
+out = translater.translate("hello", dest="bn")
+
+print(out.text)
