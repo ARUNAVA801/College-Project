@@ -11,3 +11,32 @@ translater = Translator()
 out = translater.translate("hello", dest="bn")
 
 print(out.text)
+
+
+
+// GOOGLE TRANSLATOR MEREGE SMS ICON
+
+
+
+from googletrans import Translator
+
+translater = Translator()
+
+out = translater.translate( arr[0:1000], dest="bn")
+print(out)
+
+
+
+account_sid = "AC548df747bc81e4916d86e9cd9af579c0"
+auth_token = "295219ca854b9e74bdbe28bb9283c671"
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+
+ body=   out
+, 
+  from_='[+][1] [8065458307]',
+  to= '[+][91]  {9735105301]'
+)
+
+print(message.sid)
